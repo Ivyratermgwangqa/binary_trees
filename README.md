@@ -1,14 +1,14 @@
 # binary_trees
 
-```markdown
 # Binary Trees Project
 
 This repository contains C code for various binary tree operations as part of a project. The tasks range from basic binary tree functionalities to more advanced operations on different types of binary trees.
-```
+
 ## Table of Contents
 
 - [Requirements](#requirements)
 - [How to Use](#how-to-use)
+- [Data structures](#data-structures)
 - [Example Commands](#example-commands)
 - [Task Descriptions](#task-descriptions)
 - [Author](#author)
@@ -29,6 +29,55 @@ This repository contains C code for various binary tree operations as part of a 
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o binary_tree <your_files.c>
 ./binary_tree
+```
+Including information about the data structures and types for binary trees in the README.md file is indeed important, especially for anyone who wants to understand the structure of the code and the types used in the implementation. This information helps users, collaborators, or graders to navigate the codebase, understand the data structures involved, and use or review the code effectively.
+
+In your README.md, you can create a section called "Data Structures" or something similar, and include the provided information about the binary tree structures. Here's an example of how you might include it in your README.md:
+
+# Binary Trees Project
+
+This project implements various operations on binary trees. The following data structures are used:
+
+## Data Structures
+
+### Basic Binary Tree
+
+```c
+/**
+ * struct binary_tree_s - Binary tree node
+ *
+ * @n: Integer stored in the node
+ * @parent: Pointer to the parent node
+ * @left: Pointer to the left child node
+ * @right: Pointer to the right child node
+ */
+struct binary_tree_s
+{
+    int n;
+    struct binary_tree_s *parent;
+    struct binary_tree_s *left;
+    struct binary_tree_s *right;
+};
+
+typedef struct binary_tree_s binary_tree_t;
+```
+
+### Binary Search Tree
+
+```c
+typedef struct binary_tree_s bst_t;
+```
+
+### AVL Tree
+
+```c
+typedef struct binary_tree_s avl_t;
+```
+
+### Max Binary Heap
+
+```c
+typedef struct binary_tree_s heap_t;
 ```
 
 ## Example Commands
