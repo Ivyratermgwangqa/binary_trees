@@ -12,23 +12,21 @@ This repository contains C code for various binary tree operations as part of a 
 - [Example Commands](#example-commands)
 - [Task Descriptions](#task-descriptions)
 - [Author](#author)
-```
-```
+
 ## Requirements
 
 - Ubuntu 20.04 LTS
 - Compiler: gcc with options -Wall -Werror -Wextra -pedantic -std=gnu89
 - Editor: vi, vim, emacs
 - Betty Style Guide
-```
-```
+
 ## How to Use
 
 1. Clone the repository to your local machine.
 2. Compile the C files using the provided compilation flags.
 3. Execute the resulting binary.
+
 ```
-```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o binary_tree <your_files.c>
 ./binary_tree
 ```
