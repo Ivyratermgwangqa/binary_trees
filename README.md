@@ -1,7 +1,5 @@
 # binary_trees
 
-# Binary Trees Project
-
 This repository contains C code for various binary tree operations as part of a project. The tasks range from basic binary tree functionalities to more advanced operations on different types of binary trees.
 
 ## Table of Contents
@@ -30,10 +28,6 @@ This repository contains C code for various binary tree operations as part of a 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o binary_tree <your_files.c>
 ./binary_tree
 ```
-
-# Binary Trees Project
-
-This project implements various operations on binary trees. The following data structures are used:
 
 ## Data Structures
 
