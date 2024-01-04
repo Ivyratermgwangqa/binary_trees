@@ -30,9 +30,6 @@ This repository contains C code for various binary tree operations as part of a 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o binary_tree <your_files.c>
 ./binary_tree
 ```
-Including information about the data structures and types for binary trees in the README.md file is indeed important, especially for anyone who wants to understand the structure of the code and the types used in the implementation. This information helps users, collaborators, or graders to navigate the codebase, understand the data structures involved, and use or review the code effectively.
-
-In your README.md, you can create a section called "Data Structures" or something similar, and include the provided information about the binary tree structures. Here's an example of how you might include it in your README.md:
 
 # Binary Trees Project
 
