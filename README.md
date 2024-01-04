@@ -13,7 +13,7 @@ This repository contains C code for various binary tree operations as part of a 
 - [Task Descriptions](#task-descriptions)
 - [Author](#author)
 ```
-```bash
+```
 ## Requirements
 
 - Ubuntu 20.04 LTS
@@ -21,7 +21,7 @@ This repository contains C code for various binary tree operations as part of a 
 - Editor: vi, vim, emacs
 - Betty Style Guide
 ```
-```bash
+```
 ## How to Use
 
 1. Clone the repository to your local machine.
@@ -42,7 +42,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o binary_tree <your_files.c>
 # Example command for Task 1
 ./binary_tree_task_1
 ```
-
+```
 ## Task Descriptions
 Brief descriptions for each task from 0 to 41:
 
@@ -171,7 +171,7 @@ Write a function to convert a Binary Max Heap to a sorted array of integers.
 
 ### Task 41: Big O #Binary Heap
 Provide the average time complexities for various operations on a Binary Heap.
-
+```
 If you have specific questions about any task or need more details, feel free to ask!
 ## Author
 
