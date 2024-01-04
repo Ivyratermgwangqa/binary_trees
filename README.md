@@ -4,7 +4,7 @@
 # Binary Trees Project
 
 This repository contains C code for various binary tree operations as part of a project. The tasks range from basic binary tree functionalities to more advanced operations on different types of binary trees.
-
+```
 ## Table of Contents
 
 - [Requirements](#requirements)
@@ -176,9 +176,5 @@ If you have specific questions about any task or need more details, feel free to
 ## Author
 
 [Lerato Mgwangqa]
-```
-```
-```
-```
 
 Feel free to customize this template according to your needs. If you have specific instructions or details for each task, you can include them under each task's description.
