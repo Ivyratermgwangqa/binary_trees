@@ -5,9 +5,11 @@
  *
  * Return: 1 if node is a leaf, 0 otherwise.
  */
-int binary_tree_is_root(const binary_tree_t *node)
+int binary_tree_is_leaf(const binary_tree_t *node)
 {
-	if (node == NULL || node->parent != NULL)
+	if (node == NULL)
 		return (0);
-	return (1);
+	if (node->left == NULL && node->right == NULL)
+		return (1);
+	return (0);
 }
