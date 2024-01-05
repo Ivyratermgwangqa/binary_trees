@@ -157,4 +157,7 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 /* Task 41 - BST - Insert */
 bst_t *bst_insert(bst_t **tree, int value);
 
+/* print function */
+void binary_tree_print(const binary_tree_t *);
+
 #endif /* BINARY_TREES_H */
