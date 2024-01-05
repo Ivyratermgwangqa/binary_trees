@@ -29,133 +29,123 @@ typedef struct binary_tree_s heap_t;
 
 /* Function Prototypes */
 
-/* Task 0 - Basic Binary Tree Functions */
+/* Create a new node */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
-void binary_tree_print(const binary_tree_t *tree);
 
-/* Task 1 - Binary Tree Insertion */
+/* Insert a node as the left child */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+
+/* Insert a node as the right child */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 
-/* Task 2 - Heap Insertion */
-heap_t *heap_insert(heap_t **root, int value);
+/* Delete a tree */
+void binary_tree_delete(binary_tree_t *tree);
 
-/* Task 3 - Heap Array to Binary Heap */
-heap_t *array_to_heap(int *array, size_t size);
+/* Check if a node is a leaf */
+int binary_tree_is_leaf(const binary_tree_t *node);
 
-/* Task 4 - Heap Extract */
-int heap_extract(heap_t **root);
+/* Check if a node is the root */
+int binary_tree_is_root(const binary_tree_t *node);
 
-/* Task 5 - Heap Sort */
-int *heap_to_sorted_array(heap_t *heap, size_t *size);
+/* Traverse the tree in preorder */
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 
-/* Task 6 - Is Binary Heap */
+/* Traverse the tree in inorder */
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
+
+/* Traverse the tree in postorder */
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+
+/* Get the height of the tree */
+size_t binary_tree_height(const binary_tree_t *tree);
+
+/* Get the depth of a node */
+size_t binary_tree_depth(const binary_tree_t *tree);
+
+/* Get the size of the tree */
+size_t binary_tree_size(const binary_tree_t *tree);
+
+/* Count the leaves in the tree */
+size_t binary_tree_leaves(const binary_tree_t *tree);
+
+/* Count the nodes in the tree */
+size_t binary_tree_nodes(const binary_tree_t *tree);
+
+/* Check the balance factor of the tree */
+int binary_tree_balance(const binary_tree_t *tree);
+
+/* Check if the tree is a full binary tree */
+int binary_tree_is_full(const binary_tree_t *tree);
+
+/* Check if the tree is a perfect binary tree */
+int binary_tree_is_perfect(const binary_tree_t *tree);
+
+/* Get the sibling of a node */
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
+/* Get the uncle of a node */
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+
+/* Find the lowest common ancestor of two nodes */
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+		const binary_tree_t *second);
+
+/* Traverse the tree in level order */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+
+/* Check if the tree is a complete binary tree */
+int binary_tree_is_complete(const binary_tree_t *tree);
+
+/* Rotate the tree to the left */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
+/* Rotate the tree to the right */
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
+/* Check if the tree is a binary search tree (BST) */
+int binary_tree_is_bst(const binary_tree_t *tree);
+
+/* Insert a value into a binary search tree (BST) */
+bst_t *bst_insert(bst_t **tree, int value);
+
+/* Create a binary search tree (BST) from an array */
+bst_t *array_to_bst(int *array, size_t size);
+
+/* Search for a value in a binary search tree (BST) */
+bst_t *bst_search(const bst_t *tree, int value);
+
+/* Remove a value from a binary search tree (BST) */
+bst_t *bst_remove(bst_t *root, int value);
+
+/* Check if the tree is an AVL tree */
+int binary_tree_is_avl(const binary_tree_t *tree);
+
+/* Insert a value into an AVL tree */
+avl_t *avl_insert(avl_t **tree, int value);
+
+/* Create an AVL tree from an array */
+avl_t *array_to_avl(int *array, size_t size);
+
+/* Remove a value from an AVL tree */
+avl_t *avl_remove(avl_t *root, int value);
+
+/* Create an AVL tree from a sorted array */
+avl_t *sorted_array_to_avl(int *array, size_t size);
+
+/* Check if the tree is a binary heap */
 int binary_tree_is_heap(const binary_tree_t *tree);
 
-/* Task 7 - Lowest Common Ancestor in a BST */
-bst_t *lowest_common_ancestor(bst_t *first, bst_t *second);
+/* Insert a value into a binary heap */
+heap_t *heap_insert(heap_t **root, int value);
 
-/* Task 8 - Is BST */
-int binary_tree_is_bst(const binary_tree_t *tree);
+/* Create a binary heap from an array */
+heap_t *array_to_heap(int *array, size_t size);
 
-/* Task 9 - BST - Insert */
-bst_t *bst_insert(bst_t **tree, int value);
+/* Extract the root value from a binary heap */
+int heap_extract(heap_t **root);
 
-/* Task 10 - BST - Array to BST */
-bst_t *array_to_bst(int *array, size_t size);
-
-/* Task 11 - BST - Search */
-bst_t *bst_search(const bst_t *tree, int value);
-
-/* Task 12 - BST - Remove */
-bst_t *bst_remove(bst_t *root, int value);
-
-/* Task 13 - AVL - Insert */
-avl_t *avl_insert(avl_t **tree, int value);
-
-/* Task 14 - AVL - Array to AVL */
-avl_t *array_to_avl(int *array, size_t size);
-
-/* Task 15 - AVL - Remove */
-avl_t *avl_remove(avl_t *root, int value);
-
-/* Task 16 - AVL - From Sorted Array */
-avl_t *sorted_array_to_avl(int *array, size_t size);
-
-/* Task 17 - AVL - Is AVL */
-int binary_tree_is_avl(const binary_tree_t *tree);
-
-/* Task 18 - AVL - Balance Factor */
-int binary_tree_balance(const binary_tree_t *tree);
-
-/* Task 19 - AVL - Rotate Right */
-avl_t *rotate_right(avl_t *tree);
-
-/* Task 20 - AVL - Rotate Left */
-avl_t *rotate_left(avl_t *tree);
-
-/* Task 21 - AVL - AVL Tree - Insert */
-avl_t *avl_insert(avl_t **tree, int value);
-
-/* Task 22 - AVL - AVL Array to AVL Tree */
-avl_t *array_to_avl(int *array, size_t size);
-
-/* Task 23 - AVL - AVL Remove */
-avl_t *avl_remove(avl_t *root, int value);
-
-/* Task 24 - Is BST */
-int binary_tree_is_bst(const binary_tree_t *tree);
-
-/* Task 25 - BST - Insert */
-bst_t *bst_insert(bst_t **tree, int value);
-
-/* Task 26 - BST - Array to BST */
-bst_t *array_to_bst(int *array, size_t size);
-
-/* Task 27 - BST - Search */
-bst_t *bst_search(const bst_t *tree, int value);
-
-/* Task 28 - BST - Remove */
-bst_t *bst_remove(bst_t *root, int value);
-
-/* Task 29 - AVL - Insert */
-avl_t *avl_insert(avl_t **tree, int value);
-
-/* Task 30 - AVL - Array to AVL */
-avl_t *array_to_avl(int *array, size_t size);
-
-/* Task 31 - AVL - Remove */
-avl_t *avl_remove(avl_t *root, int value);
-
-/* Task 32 - AVL - From Sorted Array */
-avl_t *sorted_array_to_avl(int *array, size_t size);
-
-/* Task 33 - AVL - Is AVL */
-int binary_tree_is_avl(const binary_tree_t *tree);
-
-/* Task 34 - AVL - Balance Factor */
-int binary_tree_balance(const binary_tree_t *tree);
-
-/* Task 35 - AVL - Rotate Right */
-avl_t *rotate_right(avl_t *tree);
-
-/* Task 36 - AVL - Rotate Left */
-avl_t *rotate_left(avl_t *tree);
-
-/* Task 37 - AVL - AVL Tree - Insert */
-avl_t *avl_insert(avl_t **tree, int value);
-
-/* Task 38 - AVL - AVL Array to AVL Tree */
-avl_t *array_to_avl(int *array, size_t size);
-
-/* Task 39 - AVL - AVL Remove */
-avl_t *avl_remove(avl_t *root, int value);
-
-/* Task 40 - Is BST */
-int binary_tree_is_bst(const binary_tree_t *tree);
-
-/* Task 41 - BST - Insert */
-bst_t *bst_insert(bst_t **tree, int value);
+/* Convert a binary heap to a sorted array */
+int *heap_to_sorted_array(heap_t *heap, size_t *size);
 
 /* print function */
 void binary_tree_print(const binary_tree_t *);
